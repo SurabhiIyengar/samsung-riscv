@@ -1,3 +1,11 @@
+**Samsung Risc-V**
+
+Basic Details:
+
+Name: Surabhi M R
+College: Vidyavardhaka College of Engineering Mysore
+Email id: surabhimr04@gmail.com
+
 **Task 1: Task is to install all the essential tools such as Ubuntu on VMBox, Virtual Box, Visual C++**
 
 **1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box**
