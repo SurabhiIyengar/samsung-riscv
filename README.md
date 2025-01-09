@@ -45,7 +45,9 @@ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 
 **Disassemble the object file to view its assembly code using:**
 
-riscv64-unknown-elf-objdump -d sum_1ton.o
+riscv64-unknown-elf-objdump -d sum_1ton.o | less
+
+Use /main in the terminal to locate the main function in the assembly output.
 
 ![5](https://github.com/user-attachments/assets/b6389321-6265-4b22-a673-a1fe3415cba8)
 
