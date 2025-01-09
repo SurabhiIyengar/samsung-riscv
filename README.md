@@ -23,15 +23,15 @@ It includes comprehensive steps and  guide users through each stage of the compi
 
 **Steps to Compile a .c File :**
 
-gcc sum_1ton.c
+##gcc sum_1ton.c
 
-./a.out
+##./a.out
 
 ![3  execution](https://github.com/user-attachments/assets/fa863575-8f1f-43fd-b889-75149bb70967)
 
 **Verify the contents using the cat command:**
 
-cat sum_1ton.c
+##cat sum_1ton.c
 
 ![4](https://github.com/user-attachments/assets/9894356a-d877-433b-ae15-c8aecb497574)
 
@@ -39,13 +39,13 @@ cat sum_1ton.c
 
 **Compile the C program for RISC-V architecture using:**
 
-riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1ton.o sum_1ton.c
+##riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1ton.o sum_1ton.c
 
-riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+##riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 
 **Disassemble the object file to view its assembly code using:**
 
-riscv64-unknown-elf-objdump -d sum_1ton.o
+##riscv64-unknown-elf-objdump -d sum_1ton.o
 
 ![5](https://github.com/user-attachments/assets/b6389321-6265-4b22-a673-a1fe3415cba8)
 
