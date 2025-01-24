@@ -1,0 +1,23 @@
+"Understanding I-Type, S-Type, B-Type, U-Type, and J-Type Instructions"
+
+1. I-Type (Immediate Type Instructions)
+Purpose: For operations involving an immediate value (a constant embedded in the instruction).
+Usage: Used in load instructions, arithmetic operations with immediate values, or certain system instructions.
+
+2. S-Type (Store Type Instructions)
+Purpose: For storing data from a register into memory.
+Usage: Used in store instructions (e.g., SW, SH, SB).
+
+3. B-Type (Branch Type Instructions)
+Purpose: For conditional branching.
+Usage: Used for instructions like BEQ (branch if equal), BNE (branch if not equal).
+
+4. U-Type (Upper Immediate Instructions)
+Purpose: For operations requiring a 20-bit immediate value.
+Usage: Used in instructions like LUI (Load Upper Immediate) and AUIPC (Add Upper Immediate to PC).
+
+5. J-Type (Jump Type Instructions)
+Purpose: For jump operations, such as calling a function or jumping to an address.
+Usage: Used in instructions like JAL (Jump and Link).
+
+
