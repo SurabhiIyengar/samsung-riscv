@@ -8,6 +8,10 @@
 
 **Email id:** surabhimr04@gmail.com
 
+**Github Profile:** SurabhiIyengar
+
+**Linkedin Profile:** Surabhi M R [https://www.linkedin.com/in/surabhi-m-r-99359a259]
+
 ----------------------------------------------------------------------
 
 <details>
@@ -18,42 +22,44 @@
 ![1 installation](https://github.com/user-attachments/assets/9129b68f-1211-4ca1-82c1-4bfe99c72338)
 
 
-C and RISC-V Labs
-This repository demonstrates the processes involved in compiling C programs and generating assembly code using both a standard GCC compiler and a RISC-V GCC compiler. 
+C and RISC-V Labs:
+* This repository demonstrates the processes involved in compiling C programs and generating assembly code using both a standard GCC compiler and a RISC-V GCC compiler. 
 It includes comprehensive steps and  guide users through each stage of the compilation and debugging workflow.
+
+
 ![2 code](https://github.com/user-attachments/assets/95f94dbf-c789-48b4-8a22-d29ece090146)
 
 
 
-**Steps to Compile a .c File :**
-'''sh
+#### Steps to Compile a .c File :
+```sh
 gcc sum_1ton.c
 ./a.out
-'''
+```
 ![3  execution](https://github.com/user-attachments/assets/fa863575-8f1f-43fd-b889-75149bb70967)
 
-**Verify the contents using the cat command:**
-'''sh
+## Verify the contents using the cat command:
+```sh
 cat sum_1ton.c
-'''
+```
 ![4](https://github.com/user-attachments/assets/9894356a-d877-433b-ae15-c8aecb497574)
 
 
 
-**Compile the C program for RISC-V architecture using:**
-'''sh
+## Compile the C program for RISC-V architecture using:
+```sh
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1ton.o sum_1ton.c
-'''
-'''sh
+```
+```sh
 riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-'''
+```
 
-**Disassemble the object file to view its assembly code using:**
-'''sh
+## Disassemble the object file to view its assembly code using:
+```sh
 riscv64-unknown-elf-objdump -d sum_1ton.o | less
-'''
+```
 
-Use /main in the terminal to locate the main function in the assembly output.
+## Use /main in the terminal to locate the main function in the assembly output.
 
 ![5](https://github.com/user-attachments/assets/b6389321-6265-4b22-a673-a1fe3415cba8)
 
