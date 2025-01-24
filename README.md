@@ -72,6 +72,8 @@ riscv64-unknown-elf-objdump -d sum_1ton.o | less
 
 -Ofast: Focuses on maximizing performance by enabling aggressive optimizations, potentially at the cost of standard compliance.
 
+</details>
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 <details>
