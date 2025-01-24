@@ -6,7 +6,7 @@
 
 **College:** Vidyavardhaka College of Engineering Mysore
 
-**Email id:** surabhimr04@gmail.com
+**Email id:** surabhimr534@gmail.com
 
 **Github Profile:** SurabhiIyengar
 
