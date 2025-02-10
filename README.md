@@ -466,6 +466,103 @@ These fields are extracted and combined to form a 21-bit signed immediate value,
 
 
 </details>
+----------------------------------------------------------------------------------------------------------------
+<details>
+  <summary><b>Task 4:</b>Perform a functional simulation of the given RISC-V Core Verilog netlist and 
+testbench. </summary>
+  Functional simulation of RISC-V cores involves verifying that the core behaves correctly according to its design specifications. This process includes testing all possible instructions, ensuring compliance with the RISC-V instruction set architecture (ISA), and checking for any security vulnerabilities or malicious logic
+
+  # About iverilog and gtkwave
+1. Icarus Verilog is an implementation of the Verilog hardware description language.
+2. GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing.
+
+**Step 1: installation of iverilog and gtkwave**
+   using the below commands in ubuntu
+   ```sh
+   $   sudo apt get update
+   $   sudo apt get install iverilog gtkwave
+   ```
+   
+  **Step 2: clone the repository and download the netlist files for simulation by entering the following commands in terminal.**
+  ```sh
+   $ git clone https://github.com/vinayrayapati/iiitb_rv32i
+   $ cd iiitb_rv32i
+   $ gedit iiitb_rv32i.v
+   $ gedit iiitb_rv32i_tb.v
+   ```
+ **Step 3: To simulate and run the verilog code , enter the following commands in your terminal.**
+  ```sh
+ $ iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+ $ ./iiitb_rv32i
+   ```
+**Step 4:To see the output waveform in gtkwave, enter the following commands in your terminal.**
+ ```sh
+ $ gtkwave iiitb_rv32i.vcd
+   ```
+![WhatsApp Image 2025-02-10 at 15 42 05_de40f37a](https://github.com/user-attachments/assets/1d703a12-938b-4d74-ae97-2d6017cc4b3f)
+
+
+# The output waveform :
+As shown in the figure below, all the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. 
+
+![image](https://github.com/user-attachments/assets/a99ff8a6-08f5-4020-a5f0-afa6152e6bea)
+
+
+## Analysis of output waveforms
+The waveform includes the following key signals:
+
+clk: The clock signal driving the design.
+
+NPC [31:0]: The next program counter value.
+
+WB_OUT [31:0]: The write-back output signal.
+
+
+**1. add r6,r1,r2**
+![WhatsApp Image 2025-02-10 at 15 40 36_3354caa1](https://github.com/user-attachments/assets/6318edd1-96d0-4269-9f5b-eaf439329931)
+
+
+
+**2. sub r7,r1,r2**
+    ![WhatsApp Image 2025-02-10 at 15 40 36_0365db04](https://github.com/user-attachments/assets/0dc78daa-97c5-4ec9-9c7d-536e006149e9)
+
+
+**3. and r8,r1,r3**
+  ![WhatsApp Image 2025-02-10 at 15 40 40_2e264eb0](https://github.com/user-attachments/assets/74e0de99-bd5c-4159-99e4-b8dbbeb84bf4)
+
+
+**4. or r9,r2,r5**
+  ![WhatsApp Image 2025-02-10 at 15 40 43_351a5329](https://github.com/user-attachments/assets/b5517321-d5ae-45c0-ba41-4e5d6c4cd5ab)
+
+
+**5. xor r10,r1,r4**
+  ![WhatsApp Image 2025-02-10 at 15 41 30_df069da8](https://github.com/user-attachments/assets/a4b453eb-6b7e-419b-90ae-85be9afc937d)
+
+
+**6. slt r11,r2,r4**
+![WhatsApp Image 2025-02-10 at 15 41 30_950fbca4](https://github.com/user-attachments/assets/1f193445-40a1-4f71-b7b2-7bbe6b7994e6)
+
+ 
+**7. addi r12,r4,5**
+![WhatsApp Image 2025-02-10 at 15 42 05_1c2de409](https://github.com/user-attachments/assets/96628923-59fa-4ab9-a3f7-4c35d6228d0d)
+
+
+**8. sw r3,r1,2**
+![WhatsApp Image 2025-02-10 at 15 42 05_af74797c](https://github.com/user-attachments/assets/a604fcf4-a0bd-4e7a-8dad-64a755dd7197)
+
+
+**9.  lw r13,r1,2**
+    ![WhatsApp Image 2025-02-10 at 15 42 05_3c5c2bbd](https://github.com/user-attachments/assets/6fd76818-fb0a-49a9-9370-06eaf2570fd1)
+
+
+**10.  beq r0,r0,15**
+  ![WhatsApp Image 2025-02-10 at 15 42 05_3c5c2bbd](https://github.com/user-attachments/assets/6b50e2d3-05cf-4b81-90ea-38ebea8300c6)
+
+
+**11.  add r14,r2,r2**
+    ![WhatsApp Image 2025-02-10 at 15 42 05_bf6d5ea2](https://github.com/user-attachments/assets/0597dfdf-87c3-4a3d-875b-83618dee8786)
+
+</details>
 
 
 
