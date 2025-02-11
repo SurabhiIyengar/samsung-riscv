@@ -466,9 +466,9 @@ These fields are extracted and combined to form a 21-bit signed immediate value,
 
 
 </details>
-----------------------------------------------------------------------------------------------------------------
-<details>
-  <summary><b>Task 4:</b>Perform a functional simulation of the given RISC-V Core Verilog netlist and 
+----------------------------------------------------------------------------
+<details><summary><b>
+Task 4:</b>Perform a functional simulation of the given RISC-V Core Verilog netlist and 
 testbench. </summary>
   Functional simulation of RISC-V cores involves verifying that the core behaves correctly according to its design specifications. This process includes testing all possible instructions, ensuring compliance with the RISC-V instruction set architecture (ISA), and checking for any security vulnerabilities or malicious logic
 
