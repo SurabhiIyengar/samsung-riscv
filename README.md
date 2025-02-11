@@ -466,7 +466,9 @@ These fields are extracted and combined to form a 21-bit signed immediate value,
 
 
 </details>
+
 ----------------------------------------------------------------------------------------------------------------------
+
 <details><summary><b>
 Task 4:</b>Perform a functional simulation of the given RISC-V Core Verilog netlist and 
 testbench. </summary>
