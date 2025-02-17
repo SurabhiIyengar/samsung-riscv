@@ -700,24 +700,34 @@ int main(void) {
 ```
 
 ## Applications
-1. Digital Systems
+1. Digital Systems:
+   
 *Used in ALUs (Arithmetic Logic Units) for decision-making operations.
+
 *Essential in microprocessors and microcontrollers for control logic.
 
-2. Embedded Systems
+2. Embedded Systems:
+   
 *Used in sensor-based applications to compare analog-to-digital converted values.
+
 *Useful in automatic control systems like temperature controllers.
 
-3. Communication Systems
+3. Communication Systems:
+   
 *Helps in modulation and error detection by comparing signals.
+
 *Used in networking hardware to determine data priority.
 
-4. Industrial Automation
+4. Industrial Automation:
+
 *Used in robotic control systems for comparing sensor readings.
+
 *Helps in sorting mechanisms (e.g., quality control systems).
 
-5. Signal Processing
+5. Signal Processing:
+    
 *Used in digital signal processors (DSPs) to analyze audio/video signals.
+
 *Essential in image processing for pixel intensity comparison.
 
 ## Conclusion
