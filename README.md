@@ -566,7 +566,162 @@ WB_OUT [31:0]: The write-back output signal.
 
 </details>
 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+<details><summary><b>
+Task 5:</b>Implementation of 2-bit Comparator using VSDSquadron Mini Board.</summary>
+
+## Project Overview
+A 2-bit comparator is a combinational logic circuit that compares two 2-bit binary numbers, A (A1A0) and B (B1B0), and determines their relationship. The output consists of three signals:
+
+1.A > B (Output = 1 when A is greater than B)
+2.A = B (Output = 1 when A is equal to B)
+3.A < B (Output = 1 when A is less than B)
+
+## Pin Configuration
+| **Component** | **Pin** |
+|----------------|---------|
+| **VSD SQUADRON BOARD** | **Led** |
+| **Led 1** | **Pin4(PD4)** |
+| **Led 2** | **Pin5(PD5)** |
+| **Led 3** | **Pin6(PD6)** |
+
+## Truth Table
+![WhatsApp Image 2025-02-17 at 22 37 04_ad8fe45d](https://github.com/user-attachments/assets/cfb4bb39-6267-4964-a84b-e45d8cf0ebf4)
 
 
+## Circuit Diagram
+![WhatsApp Image 2025-02-17 at 22 44 58_d3bfbe8d](https://github.com/user-attachments/assets/9171f050-6910-48df-a04e-4ba7d8de51c3)
+
+## Working
+Step-by-Step Working on the VSDSquadron Mini Board
+
+1.Input Representation
+Two 2-bit numbers (A = A1A0 and B = B1B0) are provided using GPIO inputs (buttons or switches).
+The VSDSquadron Mini board reads the inputs.
+
+2.Logic Processing Using FPGA
+The logic expressions are implemented in Verilog and synthesized onto the FPGA present in the board.
+The FPGA processes the inputs and generates the corresponding output.
+
+3.Output Representation
+The output signals (A > B, A = B, A < B) are connected to LEDs or display segments.
+Depending on the input values, one of the outputs will be HIGH (1), turning on the corresponding LED.
+
+</details>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+<details><summary><b>
+Task 6:</b>Project Implementation</summary>
+
+## Steps to implement
+1. Hardware Setup:
+   *VSDSquadron Mini RISC-V Board (with FPGA support)
+   *Resistors
+   *LEDs (to display A > B, A = B, A < B)
+   *Breadboard and jumper wires (for connections)
+   *Power supply (USB or external source)
+
+2.Compilation and Upload
+*Compile the code
+*Upload to VSDSquadron Mini Board
+
+3.Testing and Debugging
+*Input testing
+*Debugging
+
+## Expected Output
+LED1 (A > B): Turns ON if A > B.
+LED2 (A = B): Turns ON if A = B.
+LED3 (A < B): Turns ON if A < B.
+The LEDs will turn on accordingly based on the comparison of A and B.
 
 
+## Code Implementation
+```sh
+#include <ch32v00x.h>
+#include <debug.h>
+#include<stdio.h>
+
+#define LED1_PIN GPIO_Pin_4 //yellow LED
+#define LED2_PIN GPIO_Pin_5 //red LED
+#define LED3_PIN GPIO_Pin_6 //green LED
+#define LED_PORT GPIOD
+
+void GPIO_Config(void) {
+    // Enable the clock for GPIOD
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+
+    // Configure PD4, PD5, and PD6 as outputs
+    GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Pin = LED1_PIN | LED2_PIN | LED3_PIN ;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; // Push-pull output
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_PORT, &GPIO_InitStructure);
+}
+
+void compare_2bit(uint8_t a, uint8_t b) {
+    // Clear all LEDs
+    GPIO_ResetBits(LED_PORT, LED1_PIN | LED2_PIN | LED3_PIN);
+
+    if (a > b) {
+      // Light up LED1 if a > b
+        GPIO_SetBits(LED_PORT, LED1_PIN);
+    } else if (a == b) {
+        // Light up LED2 if a == b
+        GPIO_SetBits(LED_PORT, LED2_PIN);
+    } else {
+        // Light up LED3 if a < b
+        GPIO_SetBits(LED_PORT, LED3_PIN);
+    }  
+    
+}  
+
+int main(void) {   
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    SystemCoreClockUpdate();
+    Delay_Init();
+    // Initialize the GPIO for the LEDs
+    GPIO_Config();
+
+
+    // Main loop to iterate over all possible 2-bit numbers  
+     for (uint8_t a = 0; a <= 3; a++) {
+        for (uint8_t b = 0; b <= 3; b++) {
+            compare_2bit(a, b);
+            Delay_Ms(5000); // Delay for visualization
+        }
+    }
+    
+    return 0;
+}
+```
+
+## Applications
+1. Digital Systems
+*Used in ALUs (Arithmetic Logic Units) for decision-making operations.
+*Essential in microprocessors and microcontrollers for control logic.
+
+2. Embedded Systems
+*Used in sensor-based applications to compare analog-to-digital converted values.
+*Useful in automatic control systems like temperature controllers.
+
+3. Communication Systems
+*Helps in modulation and error detection by comparing signals.
+*Used in networking hardware to determine data priority.
+
+4. Industrial Automation
+*Used in robotic control systems for comparing sensor readings.
+*Helps in sorting mechanisms (e.g., quality control systems).
+
+5. Signal Processing
+*Used in digital signal processors (DSPs) to analyze audio/video signals.
+*Essential in image processing for pixel intensity comparison.
+
+## Conclusion
+This implementation demonstrates the use of the VSDSquadron Mini board to design a basic digital circuit. The 2-bit comparator effectively compares two binary numbers and outputs the comparison results through LEDs. This project reinforces the fundamental concepts of digital design.Overall, this project was a valuable learning experience.
+
+</details>
+ 
