@@ -610,7 +610,7 @@ Depending on the input values, one of the outputs will be HIGH (1), turning on t
 
 ## Demonstration video
 
-"C:\Users\surab\Documents\WhatsApp Video 2025-02-17 at 23.29.10_46a099c0.mp4"
+https://drive.google.com/file/d/11tk_Zsxp2jjQ4TCG2tY_GWSKHdWYz9wO/view?usp=drivesdk
 
 </details>
 
