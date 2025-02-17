@@ -621,7 +621,7 @@ Task 6:</b>Project Implementation</summary>
    
   - Resistors
    
-  -LEDs (to display A > B, A = B, A < B)
+   -LEDs (to display A > B, A = B, A < B)
    
   - Breadboard and jumper wires (for connections)
    
@@ -630,16 +630,21 @@ Task 6:</b>Project Implementation</summary>
 2.Compilation and Upload:
 
 -Compile the code
+
 -Upload to VSDSquadron Mini Board
 
 3.Testing and Debugging:
 
 -Input testing
+
 -Debugging
 
 ## Expected Output
+
 1.LED1 (A > B): Turns ON if A > B.
+
 2.LED2 (A = B): Turns ON if A = B.
+
 3.LED3 (A < B): Turns ON if A < B.
 
 The LEDs will turn on accordingly based on the comparison of A and B.
