@@ -617,24 +617,31 @@ Task 6:</b>Project Implementation</summary>
 
 ## Steps to implement
 1. Hardware Setup:
-   *VSDSquadron Mini RISC-V Board (with FPGA support)
-   *Resistors
-   *LEDs (to display A > B, A = B, A < B)
-   *Breadboard and jumper wires (for connections)
-   *Power supply (USB or external source)
+  - VSDSquadron Mini RISC-V Board
+   
+  - Resistors
+   
+  -LEDs (to display A > B, A = B, A < B)
+   
+  - Breadboard and jumper wires (for connections)
+   
+  - Power supply (USB or external source)
 
-2.Compilation and Upload
-*Compile the code
-*Upload to VSDSquadron Mini Board
+2.Compilation and Upload:
 
-3.Testing and Debugging
-*Input testing
-*Debugging
+-Compile the code
+-Upload to VSDSquadron Mini Board
+
+3.Testing and Debugging:
+
+-Input testing
+-Debugging
 
 ## Expected Output
-LED1 (A > B): Turns ON if A > B.
-LED2 (A = B): Turns ON if A = B.
-LED3 (A < B): Turns ON if A < B.
+1.LED1 (A > B): Turns ON if A > B.
+2.LED2 (A = B): Turns ON if A = B.
+3.LED3 (A < B): Turns ON if A < B.
+
 The LEDs will turn on accordingly based on the comparison of A and B.
 
 
