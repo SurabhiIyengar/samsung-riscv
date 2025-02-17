@@ -608,6 +608,10 @@ The FPGA processes the inputs and generates the corresponding output.
 The output signals (A > B, A = B, A < B) are connected to LEDs or display segments.
 Depending on the input values, one of the outputs will be HIGH (1), turning on the corresponding LED.
 
+## Demonstration video
+
+"C:\Users\surab\Documents\WhatsApp Video 2025-02-17 at 23.29.10_46a099c0.mp4"
+
 </details>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
